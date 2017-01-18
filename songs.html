@@ -1,0 +1,31 @@
+<?php
+$tracklist=array("Heading East","Drums","Replay","Survive");
+$tracklocals=array("headingeast.mp3","drums.mp3","replay.mp3","survive.mp3");
+$tracklocations=array("https://play.spotify.com/track/37LG7oopqMwr88LzB8gUSG","https://play.spotify.com/track/4CVdblACedZHPposhij1Ro","https://play.spotify.com/track/1x2tkwfPwslYmIVLTkTM0E","https://play.spotify.com/track/78z0JaWhL1HlqbwNbdp4aq");
+$tracknumber = 0;
+?>
+<section class="section">
+	<div class="container">
+<table class="table">
+  <thead>
+    <tr>
+	  <th></th>
+      <th>Track</th>
+      <th>Play</th>
+      <th colspan="2">Share</th>
+    </tr>
+  </thead>
+
+  <tbody>
+	  <?php
+	  for($tracknumber=0;$tracknumber<count($tracklist);$tracknumber++)
+	  {
+		  include('song.html');
+	  }
+		
+	  ?>
+	
+  </tbody>
+</table>
+</div>
+</section>

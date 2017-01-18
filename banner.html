@@ -1,0 +1,134 @@
+		<section class="hero hero-image-ed">
+			<div class="hero-head">
+				<div class="container">
+					<nav class="nav">
+						<div class="nav-left">
+							<a class="nav-item is-brand" href="http://elliedixonmusic.com" style="padding:4">
+								<p class="title"><strong>Ellie Dixon</strong></p>
+							</a>
+						</div>
+						<div class="nav-center">
+                            <!--
+							<a class="nav-item" href="https://www.facebook.com/elliedixonmusic/" style="padding:2">
+								<span class="icon">
+									<i class="fa fa-facebook" >
+									</i>
+								</span>
+							</a>
+							<a class="nav-item" href="https://www.youtube.com/c/EllieDixonMusic" style="padding:4">
+								<span class="icon">
+									<i class="fa fa-youtube">
+									</i>
+								</span>
+							</a>
+							<a class="nav-item" href="https://soundcloud.com/elliedixonmusic" style="padding:4">
+								<span class="icon">
+									<i class="fa fa-soundcloud">
+									</i>
+								</span>
+							</a>
+							<a class="nav-item" href="https://twitter.com/elliedmusic" style="padding:4">
+								<span class="icon">
+									<i class="fa fa-twitter">
+									</i>
+								</span>
+							</a>
+							<a class="nav-item" href="https://play.spotify.com/artist/4mvJltDSlBawXCZhq6NAso" style="padding:2">
+								<span class="icon">
+									<i class="fa fa-spotify">
+									</i>
+								</span>
+							</a>
+                             -->
+						</div> <!-- nav-center -->
+						<span id="nav-toggle" class="nav-toggle">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+						<div id="nav-menu" class="nav-right nav-menu">
+                            <a class="nav-item" href="https://www.facebook.com/elliedixonmusic/" style="padding:2" onClick="ga('send','event','Social','Select','Facebook');">
+                                <span class="icon">
+                                    <i class="fa fa-facebook" >
+                                    </i>
+                                </span>
+                                <span class="is-hidden-tablet">&nbsp;Facebook</span>
+
+                            </a>
+                            <a class="nav-item" href="https://www.youtube.com/c/EllieDixonMusic" style="padding:4" onClick="ga('send','event','Social','Select','YouTube');">
+                                <span class="icon">
+                                    <i class="fa fa-youtube">
+                                    </i>
+                                </span>
+                                <span class="is-hidden-tablet">&nbsp;YouTube</span>
+                            </a>
+                            <a class="nav-item" href="https://soundcloud.com/elliedixonmusic" style="padding:4" onClick="ga('send','event','Social','Select','Soundcloud');">
+                                <span class="icon">
+                                    <i class="fa fa-soundcloud">
+                                    </i>
+                                </span>
+                                <span class="is-hidden-tablet">&nbsp;SoundCloud</span>
+                            </a>
+                            <a class="nav-item" href="https://twitter.com/elliedmusic" style="padding:4" onClick="ga('send','event','Social','Select','Twitter');">
+                                <span class="icon">
+                                    <i class="fa fa-twitter">
+                                    </i>
+                                </span>
+                                <span class="is-hidden-tablet">&nbsp;Twitter</span>
+                            </a>
+                            <a class="nav-item" href="https://play.spotify.com/artist/4mvJltDSlBawXCZhq6NAso" style="padding:2" onClick="ga('send','event','Social','Select','Spotify');">
+                                <span class="icon">
+                                    <i class="fa fa-spotify">
+                                    </i>
+                                </span>
+                                <span class="is-hidden-tablet">&nbsp;Spotify</span>
+                            </a>
+
+                            <!--
+                             <a class="nav-item " href="http://elliedixonmusic.com">
+                             Home
+                             </a>
+							<a class="nav-item" href="index.php?page=News" onClick="ga('send','event','Menu','SelectTop','News');">
+								News
+							</a>
+							<a class="nav-item" href="index.php?page=Videos" onClick="ga('send','event','Menu','SelectTop','Videos');">
+								Videos
+							</a>
+							<a class="nav-item" href="index.php?page=EP" onClick="ga('send','event','Menu','SelectTop','News');">
+                                EP
+							</a>
+							<a class="nav-item" href="index.php?page=Images">
+								Images
+							</a>
+                            -->
+						</div>
+					</nav>
+			</div>
+			<div class="hero-body" style="spacing:0;height:260px;">
+				<!--img src="images/heroimage.jpg"/-->
+				<!-- just leave enough space here for the background image to show from previous div -->
+			</div>
+		</section>
+		<section class="hero is-primary">
+			<div class="hero-foot">
+				<div class="container">
+				      <nav class="tabs is-boxed">
+				        <ul>
+							<?php
+							function menuitem($name,$page)
+							{
+								echo '<li';
+								if($page==$name) echo' class="is-active"';
+								echo '><a href="index.php?page='.$name.'" onClick="ga(\'send\',\'event\',\'Menu\',\'SelectBar\',\''.$name.'\');">'.$name.'</a></li>';
+							}
+							menuitem("Home",$page);
+							menuitem("News",$page);
+							menuitem("Videos",$page);
+							menuitem("EP",$page);
+							menuitem("Images",$page);
+							?>
+				        </ul>
+				      </nav>
+				  </div>
+			  </div>
+		</section>

@@ -1,0 +1,7 @@
+.heroimageed
+{
+	background-image: url('images/heroimage.jpg');
+	background-size:100% auto;
+	background-position: center top;
+	background-attachment: fixed;
+}

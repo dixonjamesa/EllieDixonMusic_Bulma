@@ -1,0 +1,45 @@
+
+    <tr>
+		<td class="is-icon" style="padding-left:0;padding-right:0;">
+			  <i class="fa fa-music"></i>
+		</td>
+	  <td><?php echo $tracklist[$tracknumber];?></td>
+      <td>
+		  <a href="tracks/<?php echo $tracklocals[$tracknumber];?>"><i class="fa fa-play-circle"></i></a>
+		  <span>&nbsp;</span>
+		  <?php
+		  	if($tracklocations[$tracknumber] != "")
+			{
+		    	echo '<a href="'.$tracklocations[$tracknumber].'"><i class="fa fa-spotify"></i></a>';
+			}
+		  ?>
+	  </td>
+      <td class="is-icon">
+		<div style="padding-bottom:2px;">
+			  <!-- automatic twitter icon: -->
+		  <a href="https://twitter.com/share" class="twitter-share-button" 
+			data-text="Love this song by Ellie Dixon" 
+			data-url="<?php echo $tracklocations[$tracknumber];?>" 
+			data-show-count="false">
+		  </a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		  <!--
+        <a class="fb-share" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $tracklocations[$tracknumber];?>">
+          <i class="fa fa-facebook"></i>
+        </a>
+-->
+		<!-- share button code from FB -->
+			<div class="fb-share-button" 
+				data-href="<?php echo $tracklocations[$tracknumber];?>" 
+				data-layout="button">
+			</div>
+			
+      </td>
+      <td class="is-icon">
+        <a href="mailto:?subject=Thought you'd like this song&body=I found this song by Ellie Dixon and thought you'd like it <?php echo $tracklocations[$tracknumber];?>">
+          <i class="fa fa-envelope"></i>
+        </a>
+      </td>
+    </tr>
+

@@ -1,0 +1,73 @@
+<?php
+	$totalimages=12;
+?>
+	<div class="section">
+			<div class="columns is-hidden-mobile">
+				<div class="column">
+					<?php
+					for($i=0;$i<$totalimages/3;$i++)
+					{
+		  	          	echo '<figure class="image is-square">';
+                        if($i==0){
+                            // we do this for google search reasons - let's get her picture out there
+                            echo '<img src="images/ellie-dixon.jpg" alt="ellie dixon">';
+                        }
+                        else{
+                            echo '<img src="images/gig'.($i+1).'.jpg">';
+                        }
+		  	          	echo '</figure></br>';
+				  	}
+				  ?>
+				</div>
+				<div class="column">
+					<?php
+					for($i=0;$i<$totalimages/3;$i++)
+					{
+		  	          	echo '<figure class="image is-square">';
+		  				echo '<img src="images/gig'.($i+1+$totalimages/3).'.jpg">';
+		  	          	echo '</figure></br>';
+				  	}
+				  ?>
+				</div>
+				<div class="column">
+					<?php
+					for($i=0;$i<$totalimages/3;$i++)
+					{
+		  	          	echo '<figure class="image is-square">';
+		  				echo '<img src="images/gig'.($i+1+$totalimages*2/3).'.jpg">';
+		  	          	echo '</figure></br>';
+				  	}
+				  ?>
+				</div>
+			</div>
+	<!-- simple mobile layout...-->
+	<div class="columns is-hidden-tablet is-mobile">
+		<div class="column">
+			<?php
+			for($i=0;$i<$totalimages/2;$i++)
+			{
+  	          	echo '<figure class="image is-square">';
+                if($i==0){
+                    // we do this for google search reasons - let's get her picture out there
+                    echo '<img src="images/ellie-dixon.jpg" alt="ellie dixon">';
+                }
+                else{
+                    echo '<img src="images/gig'.($i+1).'.jpg">';
+                }
+  	          	echo '</figure></br>';
+		  	}
+		  ?>
+		</div>
+		<div class="column">
+			<?php
+			for($i=0;$i<$totalimages/2;$i++)
+			{
+  	          	echo '<figure class="image is-square">';
+  				echo '<img src="images/gig'.($i+1+$totalimages/2).'.jpg">';
+  	          	echo '</figure></br>';
+		  	}
+		  ?>
+		</div>
+	</div>
+</div>
+
